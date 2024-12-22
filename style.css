@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition-duration: 300ms;
+}
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+.wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.container{
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.container h1{
+    margin: 20px 0;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: bolder;
+
+}
+.images{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.fig{
+    position: relative;
+    width: 32%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.fig img{
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+    box-shadow: 0 0 20px #333;
+}
+figcaption{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    opacity: 0;
+    color: white;
+    width: 100%;
+    height: 20%;
+    border-radius: 0 0 10px 10px;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+
+}
+.fig:hover{
+    scale: 1.03;
+    filter: drop-shadow(0 0 10px #333);
+}
+.fig:hover img{
+    filter: grayscale(0%);
+    
+}
+.fig:hover figcaption{
+    opacity: 1;
+    scale: 1.03;
+}
